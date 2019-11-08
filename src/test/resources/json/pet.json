@@ -1,0 +1,22 @@
+{
+  "id": 11,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie-10",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string0"
+    },
+    {
+      "id": 1,
+      "name": "string1"
+    }
+  ],
+  "status": "available"
+}

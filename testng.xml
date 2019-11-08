@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ServiceSuite">
+	<test thread-count="5" name="Test">
+
+<!-- 		<packages>
+			<package name="testcases.*" />
+		</packages> -->
+
+		<classes>
+<!-- 		<class name="testcases.TestClass4"/> -->
+		<class name="testcases.Way1_Misc_Old"/>
+		
+		</classes>
+	</test>
+</suite>
