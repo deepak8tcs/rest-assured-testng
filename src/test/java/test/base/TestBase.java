@@ -1,34 +1,46 @@
 package test.base;
 
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
+import request.pojo.PetRequest;
+import utils.JsonReader;
 import utils.PropertyReader;
 
 public class TestBase {
 	
 	public static PropertyReader properties =PropertyReader.getInstance();
+	
+	public String id;
 		
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	@BeforeSuite
 	public void setUpRequest(){
-		RestAssured.baseURI =properties.getPropertyValue("baseurl2");
-
+		RestAssured.baseURI =properties.getPropertyValue("baseurl");
 	}
 	
+	@BeforeTest
+	public void setUpTestData(){
+		setUpPetData();
+	}
 	
 	
 	public Response postRequest(String requestJson, String api) {	
 		Reporter.log("POST Request URL is : "+RestAssured.baseURI+api, true);
 		Reporter.log("POST Request Body is : "+requestJson,true);
-//		
-//		RequestSpecification request = RestAssured.given();
-//		request.body(requestJson);
-//		Response response = request.post(api);
 		
 		Response response = given()
 				.contentType(ContentType.JSON)
@@ -47,10 +59,6 @@ public class TestBase {
 	public Response putRequest(String requestJson, String api) {	
 		Reporter.log("PUT Request URL is : "+RestAssured.baseURI+api, true);
 		Reporter.log("PUT Request Body is : "+requestJson,true);
-//		
-//		RequestSpecification request = RestAssured.given();
-//		request.body(requestJson);
-//		Response response = request.post(api);
 		
 		Response response = given()
 				.contentType(ContentType.JSON)
@@ -95,5 +103,13 @@ public class TestBase {
 		return response;
 		
 	}
+	
+	public void setUpPetData(){
+		PetRequest petRequest =JsonReader.getJavaObjectFromJsonFile("pet.json", PetRequest.class);
+		Response response= postRequest(JsonReader.getJsonStringFromObject(petRequest),"v2/pet");
+		Assert.assertEquals(response.getStatusCode(), 200);
+		setId(response.jsonPath().getString("id"));		
+	}
+	
 
 }

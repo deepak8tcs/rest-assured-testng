@@ -3,11 +3,44 @@
 <suite name="Failed suite [ServiceSuite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcases.Way1_Misc_Old">
+      <class name="testcases.RemovePet">
         <methods>
-          <include name="GetPetDetails"/>
+          <include name="setUpRequest"/>
+          <include name="deletePetDetails"/>
+          <include name="setUpTestData"/>
         </methods>
-      </class> <!-- testcases.Way1_Misc_Old -->
+      </class> <!-- testcases.RemovePet -->
+      <class name="testcases.PetManagement">
+        <methods>
+          <include name="deletePetDetails"/>
+          <include name="updatePetDetails"/>
+          <include name="setUpRequest"/>
+          <include name="petRegistration"/>
+          <include name="setUpTestData"/>
+          <include name="getPetDetails"/>
+        </methods>
+      </class> <!-- testcases.PetManagement -->
+      <class name="testcases.GetPetDetailsById">
+        <methods>
+          <include name="getPetDetails"/>
+          <include name="setUpRequest"/>
+          <include name="setUpTestData"/>
+        </methods>
+      </class> <!-- testcases.GetPetDetailsById -->
+      <class name="testcases.RegisterPet">
+        <methods>
+          <include name="setUpRequest"/>
+          <include name="petRegistration"/>
+          <include name="setUpTestData"/>
+        </methods>
+      </class> <!-- testcases.RegisterPet -->
+      <class name="testcases.UpdatePet">
+        <methods>
+          <include name="updatePetDetails"/>
+          <include name="setUpRequest"/>
+          <include name="setUpTestData"/>
+        </methods>
+      </class> <!-- testcases.UpdatePet -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [ServiceSuite] -->

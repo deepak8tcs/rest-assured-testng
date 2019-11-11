@@ -19,13 +19,42 @@ import io.restassured.specification.RequestSpecification;
 
 public class Way1_Misc_Old {
 
+	//@Test
+	public void GetPetDetails()
+	{   
 
+		//Given When Then BDD (Gherkin) style
+
+		Response response = given()
+				.contentType(ContentType.JSON)
+				.accept(ContentType.JSON)
+				.when()
+				.get("https://petstore.swagger.io/v2/pet/1");
+
+		response.then().statusCode(200);
+		response.then().body("id", Matchers.any(Integer.class));
+		response.then().body("id", Matchers.is(1));
+		response.then().body("id", Matchers.not(9999));
+		response.then().body("tags.id", Matchers.hasItems(0));
+		response.then().body("name", Matchers.is("doggie-10")); //or
+		response.then().body("name", is("doggie-10"));
+		response.then().body("name", Matchers.is("doggie-10"));
+		response.then().body("name", Matchers.containsString("doggie"));
+
+
+		Assert.assertEquals(response.getStatusCode(), 200,"incorrect response code");
+		//testNG assertion has benefit that we can give custom message in case of failure
+		System.out.println("Response Body is =>  " + response.body().asString());
+
+
+	}
 	//@Test
 	public void GetWeatherDetails()
 	{   
 
-		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
+		//Basic Rest Assured syntax
 
+		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
 
 		RequestSpecification httpRequest = RestAssured.given();
 		httpRequest.header("Content-Type","application/json");
@@ -33,8 +62,6 @@ public class Way1_Misc_Old {
 
 		Response response = httpRequest.get("/Hyderabad");
 		//Response response = httpRequest.request(Method.GET, "/Hyderabad"); //alternative syntax
-
-
 
 
 		String responseBody = response.body().asString(); 
@@ -76,44 +103,15 @@ public class Way1_Misc_Old {
 
 	}
 
-	@Test
-	public void GetPetDetails()
-	{   
-
-
-		//Given When Then BDD style
-
-		Response response = given()
-				.contentType(ContentType.JSON)
-				.accept(ContentType.JSON)
-				.when()
-				.get("https://petstore.swagger.io/v2/pet/1");
-
-		response.then().statusCode(200);
-		response.then().body("id", Matchers.any(Integer.class));
-		response.then().body("id", Matchers.is(1));
-		response.then().body("id", Matchers.not(9999));
-		response.then().body("tags.id", Matchers.hasItems(0));
-		response.then().body("name", Matchers.is("doggie-10")); //or
-		response.then().body("name", is("doggie-10"));
-		response.then().body("name", Matchers.is("doggie-10"));
-		response.then().body("name", Matchers.containsString("doggie"));
-
-
-		Assert.assertEquals(response.getStatusCode(), 200,"incorrect response code");
-		//testNG assertion has benefit that we can give custom message in case of failure
-		System.out.println("Response Body is =>  " + response.body().asString());
-
-
-	}
-
-
 	@SuppressWarnings("unchecked")
 	//@Test
 	public void registerUser()
 	{		
+
+		//creating a json payload using simple josn library
+
 		RestAssured.baseURI ="http://restapi.demoqa.com/customer";
-		RequestSpecification request = RestAssured.given();
+		RequestSpecification request = RestAssured.given();	
 
 		JSONObject requestParams = new JSONObject();
 		requestParams.put("FirstName", "eddkv1"); // Cast

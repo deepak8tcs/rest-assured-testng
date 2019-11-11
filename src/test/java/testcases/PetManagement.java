@@ -3,6 +3,7 @@ package testcases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import request.pojo.PetRequest;
 import test.base.TestBase;
@@ -52,21 +53,21 @@ public class PetManagement extends TestBase {
 		Assert.assertEquals(petResponse.getTags().stream().filter(x -> x.getId() >=0).count(), petResponse.getTags().size());
 
 		//
-		//		JsonPath jp = response.jsonPath();
-		//		Assert.assertEquals(jp.get("name"), "doggie-10");
-		//		Assert.assertEquals(jp.get("tags[0].id").toString(), "0");
-		//		Assert.assertEquals(jp.get("tags[-1].id").toString(), "1");
-		//		Assert.assertEquals(jp.get("tags.findAll{tag -> tag.id >= 0}.size()").toString(), "2");
-		//		Assert.assertFalse(jp.param("tagId", 0).get("tags.findAll{tag -> tag.id == tagId}").toString().isEmpty());
-
-		//		System.out.println("Get pet name: "+jp.get("name")); 
-		//		System.out.println("Get the first tag id:: "+jp.get("tags[0].id")); //Get the first tag id:
-		//		System.out.println("Get the last tag id:: "+jp.get("tags[-1].id")); //Get the last tag id:
-		//		System.out.println("List<String> ids: "+jp.get("tags.id"));  //List<String>
-		//		System.out.println("dkv: "+jp.get("tags.findAll{tag -> tag.id > 0}"));
-		//		System.out.println("list size satisfying condition: "+jp.get("tags.findAll{tag -> tag.id >= 0}.size()"));
-		//		System.out.println("dkv: "+jp.param("tagId", 0).get("tags.findAll{tag -> tag.id == tagId}"));
-
+		//				JsonPath jp = response.jsonPath();
+		//				Assert.assertEquals(jp.get("name"), "doggie-10");
+		//				Assert.assertEquals(jp.get("tags[0].id").toString(), "0");
+		//				Assert.assertEquals(jp.get("tags[-1].id").toString(), "1");
+		//				Assert.assertEquals(jp.get("tags.findAll{tag -> tag.id >= 0}.size()").toString(), "2");
+		//				Assert.assertFalse(jp.param("tagId", 0).get("tags.findAll{tag -> tag.id == tagId}").toString().isEmpty());
+		//
+		//				System.out.println("Get pet name: "+jp.get("name")); 
+		//				System.out.println("Get the first tag id:: "+jp.get("tags[0].id")); //Get the first tag id:
+		//				System.out.println("Get the last tag id:: "+jp.get("tags[-1].id")); //Get the last tag id:
+		//				System.out.println("List<String> ids: "+jp.get("tags.id"));  //List<String>
+		//				System.out.println("dkv: "+jp.get("tags.findAll{tag -> tag.id > 0}"));
+		//				System.out.println("list size satisfying condition: "+jp.get("tags.findAll{tag -> tag.id >= 0}.size()"));
+		//				System.out.println("dkv: "+jp.param("tagId", 0).get("tags.findAll{tag -> tag.id == tagId}"));
+		//
 
 
 	}

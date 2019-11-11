@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import object.modifier.CustomerObjectModifer;
 import request.pojo.RegisterRequest;
@@ -32,17 +33,15 @@ public class RegisterUser extends TestBase {
 
 	@BeforeClass
 	public void setUp() {
-
 		coModifier = new CustomerObjectModifer();
-
 	}
 
 
-	@Test
+	//@Test
 	public void registerUser() throws Exception
 	{		
 
-		RegisterRequest register =JsonReader.getJavaObjectFromJsonFile("register.json", RegisterRequest.class);
+		RegisterRequest register =JsonReader.getJavaObjectFromJsonFile("user.json", RegisterRequest.class);
 		setRegisterRequest(register);	
 
 		HashMap<String,String> regData = new HashMap<String, String>();

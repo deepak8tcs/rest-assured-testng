@@ -2,14 +2,12 @@
 <suite name="ServiceSuite">
 	<test thread-count="5" name="Test">
 
-<!-- 		<packages>
+		<packages>
 			<package name="testcases.*" />
-		</packages> -->
+		</packages>
 
-		<classes>
-<!-- 		<class name="testcases.TestClass4"/> -->
-		<class name="testcases.Way1_Misc_Old"/>
-		
-		</classes>
+<!-- 		<classes>
+		<class name="testcases.Way1_Misc_Old"/>		
+		</classes> -->
 	</test>
 </suite>
