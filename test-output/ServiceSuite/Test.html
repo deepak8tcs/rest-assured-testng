@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 12 14:02:47 IST 2019</td>
+<td>Started on:</td><td>Tue Nov 12 19:55:03 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>26 seconds (26791 ms)</td>
+<tr><td>Total time:</td><td>33 seconds (33130 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,66 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testcases.RemovePet.deletePetDetails()'><b>deletePetDetails</b><br>Test class: testcases.RemovePet<br/>
-<a href="#Output-571481216" onClick='toggleBox("Output-571481216", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-571481216" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-571481216">
-DELETE Request URL is : https://petstore.swagger.io/v2/pet/null<br/>
-DELETE Response Code is : 404<br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
-	at testcases.RemovePet.deletePetDetails(RemovePet.java:16)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace571481216", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace571481216'><pre>java.lang.AssertionError: expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:839)
-	at org.testng.Assert.assertEquals(Assert.java:849)
-	at testcases.RemovePet.deletePetDetails(RemovePet.java:16)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>1</td>
-<td>testcases.RemovePet@4973813a</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -135,106 +75,161 @@ DELETE Response Code is : 404<br/>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.PetManagement.deletePetDetails()'><b>deletePetDetails</b><br>Test class: testcases.PetManagement<br/>
-<a href="#Output-1387671967" onClick='toggleBox("Output-1387671967", this, "Show output", "Hide output");'>Show output</a>
+<td title='testcases.RemovePet.deletePet()'><b>deletePet</b><br>Test class: testcases.RemovePet<br/>
+<a href="#Output-838800272" onClick='toggleBox("Output-838800272", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1387671967" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1387671967">
+<a href="#Output-838800272" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-838800272">
+******************************************<br/>
+---Test STARTED--->testcases.RemovePet.deletePet<br/>
+Setting up test data.<br/>
+POST Request URL is : https://petstore.swagger.io/v2/pet<br/>
+POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+POST Response Code is : 200<br/>
+POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+PetId is set to: 11<br/>
 DELETE Request URL is : https://petstore.swagger.io/v2/pet/11<br/>
 DELETE Response Code is : 200<br/>
+---Test PASSED--->testcases.RemovePet.deletePet<br/>
 </div>
 </td>
 <td></td>
-<td>1</td>
-<td>testcases.PetManagement@cd2dae5</td></tr>
+<td>5</td>
+<td>testcases.RemovePet@6321e813</td></tr>
+<tr>
+<td title='testcases.PetManagement.deletePetDetails()'><b>deletePetDetails</b><br>Test class: testcases.PetManagement<br/>
+<a href="#Output-193625667" onClick='toggleBox("Output-193625667", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-193625667" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-193625667">
+******************************************<br/>
+---Test STARTED--->testcases.PetManagement.deletePetDetails<br/>
+Setting up test data.<br/>
+POST Request URL is : https://petstore.swagger.io/v2/pet<br/>
+POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+POST Response Code is : 200<br/>
+POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+PetId is set to: 11<br/>
+DELETE Request URL is : https://petstore.swagger.io/v2/pet/11<br/>
+DELETE Response Code is : 200<br/>
+---Test PASSED--->testcases.PetManagement.deletePetDetails<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>testcases.PetManagement@3a883ce7</td></tr>
 <tr>
 <td title='testcases.GetPetDetailsById.getPetDetails()'><b>getPetDetails</b><br>Test class: testcases.GetPetDetailsById<br/>
-<a href="#Output-1181567472" onClick='toggleBox("Output-1181567472", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-391827378" onClick='toggleBox("Output-391827378", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1181567472" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1181567472">
+<a href="#Output-391827378" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-391827378">
+******************************************<br/>
+---Test STARTED--->testcases.GetPetDetailsById.getPetDetails<br/>
+Setting up test data.<br/>
+POST Request URL is : https://petstore.swagger.io/v2/pet<br/>
+POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+POST Response Code is : 200<br/>
+POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+PetId is set to: 11<br/>
 GET Request URL is : https://petstore.swagger.io/v2/pet/11<br/>
 GET Response Code is : 200<br/>
 GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+---Test PASSED--->testcases.GetPetDetailsById.getPetDetails<br/>
 </div>
 </td>
 <td></td>
-<td>1</td>
-<td>testcases.GetPetDetailsById@49fc609f</td></tr>
+<td>4</td>
+<td>testcases.GetPetDetailsById@cd2dae5</td></tr>
 <tr>
 <td title='testcases.PetManagement.getPetDetails()'><b>getPetDetails</b><br>Test class: testcases.PetManagement<br/>
-<a href="#Output-1638471954" onClick='toggleBox("Output-1638471954", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-903064416" onClick='toggleBox("Output-903064416", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1638471954" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1638471954">
+<a href="#Output-903064416" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-903064416">
+******************************************<br/>
+---Test STARTED--->testcases.PetManagement.getPetDetails<br/>
 GET Request URL is : https://petstore.swagger.io/v2/pet/11<br/>
 GET Response Code is : 200<br/>
 GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+---Test PASSED--->testcases.PetManagement.getPetDetails<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>testcases.PetManagement@cd2dae5</td></tr>
+<td>testcases.PetManagement@3a883ce7</td></tr>
 <tr>
 <td title='testcases.PetManagement.petRegistration()'><b>petRegistration</b><br>Test class: testcases.PetManagement<br/>
-<a href="#Output-497786326" onClick='toggleBox("Output-497786326", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1220813917" onClick='toggleBox("Output-1220813917", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-497786326" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-497786326">
+<a href="#Output-1220813917" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1220813917">
+******************************************<br/>
+---Test STARTED--->testcases.PetManagement.petRegistration<br/>
 POST Request URL is : https://petstore.swagger.io/v2/pet<br/>
 POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
 POST Response Code is : 200<br/>
 POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+---Test PASSED--->testcases.PetManagement.petRegistration<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>testcases.PetManagement@cd2dae5</td></tr>
+<td>testcases.PetManagement@3a883ce7</td></tr>
 <tr>
 <td title='testcases.RegisterPet.petRegistration()'><b>petRegistration</b><br>Test class: testcases.RegisterPet<br/>
-<a href="#Output-1970528559" onClick='toggleBox("Output-1970528559", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-745571392" onClick='toggleBox("Output-745571392", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1970528559" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1970528559">
+<a href="#Output-745571392" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-745571392">
+******************************************<br/>
+---Test STARTED--->testcases.RegisterPet.petRegistration<br/>
 POST Request URL is : https://petstore.swagger.io/v2/pet<br/>
 POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
 POST Response Code is : 200<br/>
 POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+---Test PASSED--->testcases.RegisterPet.petRegistration<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>testcases.RegisterPet@3a883ce7</td></tr>
+<td>testcases.RegisterPet@4973813a</td></tr>
 <tr>
 <td title='testcases.UpdatePet.updatePetDetails()'><b>updatePetDetails</b><br>Test class: testcases.UpdatePet<br/>
-<a href="#Output-665512315" onClick='toggleBox("Output-665512315", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-801142660" onClick='toggleBox("Output-801142660", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-665512315" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-665512315">
+<a href="#Output-801142660" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-801142660">
+******************************************<br/>
+---Test STARTED--->testcases.UpdatePet.updatePetDetails<br/>
 PUT Request URL is : https://petstore.swagger.io/v2/pet<br/>
 PUT Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
 PUT Response Code is : 200<br/>
 PUT Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+---Test PASSED--->testcases.UpdatePet.updatePetDetails<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>testcases.UpdatePet@6321e813</td></tr>
+<td>testcases.UpdatePet@79be0360</td></tr>
 <tr>
 <td title='testcases.PetManagement.updatePetDetails()'><b>updatePetDetails</b><br>Test class: testcases.PetManagement<br/>
-<a href="#Output-426070939" onClick='toggleBox("Output-426070939", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-337545117" onClick='toggleBox("Output-337545117", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-426070939" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-426070939">
+<a href="#Output-337545117" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-337545117">
+******************************************<br/>
+---Test STARTED--->testcases.PetManagement.updatePetDetails<br/>
 PUT Request URL is : https://petstore.swagger.io/v2/pet<br/>
 PUT Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
 PUT Response Code is : 200<br/>
 PUT Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}<br/>
+---Test PASSED--->testcases.PetManagement.updatePetDetails<br/>
 </div>
 </td>
 <td></td>
 <td>1</td>
-<td>testcases.PetManagement@cd2dae5</td></tr>
+<td>testcases.PetManagement@3a883ce7</td></tr>
 </table><p>
 </body>
 </html>

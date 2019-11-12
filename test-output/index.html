@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-ServiceSuite">
-              <span class="suite-name border-failed">ServiceSuite</span>
+              <span class="suite-name border-passed">ServiceSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-ServiceSuite" class="hide-methods failed suite-ServiceSuite"> (hide)</a> <!-- hide-methods failed suite-ServiceSuite -->
-                      <a href="#" panel-name="suite-ServiceSuite" class="show-methods failed suite-ServiceSuite"> (show)</a> <!-- show-methods failed suite-ServiceSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-ServiceSuite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ServiceSuite" title="testcases.RemovePet" hash-for-method="deletePetDetails">deletePetDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-ServiceSuite -->
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,6 +100,11 @@
                       <a href="#" panel-name="suite-ServiceSuite" class="show-methods passed suite-ServiceSuite"> (show)</a> <!-- show-methods passed suite-ServiceSuite -->
                     </span>
                     <div class="method-list-content passed suite-ServiceSuite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ServiceSuite" title="testcases.RemovePet" hash-for-method="deletePet">deletePet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-ServiceSuite" title="testcases.PetManagement" hash-for-method="deletePetDetails">deletePetDetails</a> <!-- method navigator-link -->
@@ -141,12 +132,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ServiceSuite" title="testcases.UpdatePet" hash-for-method="updatePetDetails">updatePetDetails</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-ServiceSuite" title="testcases.PetManagement" hash-for-method="updatePetDetails">updatePetDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ServiceSuite" title="testcases.PetManagement" hash-for-method="updatePetDetails">updatePetDetails</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-ServiceSuite" title="testcases.UpdatePet" hash-for-method="updatePetDetails">updatePetDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ServiceSuite -->
@@ -161,10 +152,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ServiceSuite" class="panel ServiceSuite">
-          <div class="suite-ServiceSuite-class-failed">
+          <div class="suite-ServiceSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">testcases.RemovePet</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deletePet">
+                  </a> <!-- deletePet -->
+                  <span class="method-name">deletePet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ServiceSuite-class-passed -->
+          <div class="suite-ServiceSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.PetManagement</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -172,21 +178,22 @@
                   <a name="deletePetDetails">
                   </a> <!-- deletePetDetails -->
                   <span class="method-name">deletePetDetails</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [200] but found [404]
-	at testcases.RemovePet.deletePetDetails(RemovePet.java:16)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ServiceSuite-class-failed -->
-          <div class="suite-ServiceSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.UpdatePet</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPetDetails">
+                  </a> <!-- getPetDetails -->
+                  <span class="method-name">getPetDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="petRegistration">
+                  </a> <!-- petRegistration -->
+                  <span class="method-name">petRegistration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="updatePetDetails">
@@ -229,30 +236,9 @@
           <div class="suite-ServiceSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testcases.PetManagement</span>
+              <span class="class-name">testcases.UpdatePet</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="deletePetDetails">
-                  </a> <!-- deletePetDetails -->
-                  <span class="method-name">deletePetDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getPetDetails">
-                  </a> <!-- getPetDetails -->
-                  <span class="method-name">getPetDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="petRegistration">
-                  </a> <!-- petRegistration -->
-                  <span class="method-name">petRegistration</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="updatePetDetails">
@@ -272,6 +258,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;ServiceSuite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listeners.EventListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;packages&gt;
       &lt;package name=&quot;testcases.*&quot;/&gt;
@@ -325,42 +314,42 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'petRegistration')
-data.setCell(0, 2, 'testcases.PetManagement')
-data.setCell(0, 3, 1964);
+data.setCell(0, 1, 'deletePet')
+data.setCell(0, 2, 'testcases.RemovePet')
+data.setCell(0, 3, 5342);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'getPetDetails')
 data.setCell(1, 2, 'testcases.GetPetDetailsById')
-data.setCell(1, 3, 1935);
+data.setCell(1, 3, 4011);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'deletePetDetails')
-data.setCell(2, 2, 'testcases.RemovePet')
-data.setCell(2, 3, 1905);
+data.setCell(2, 2, 'testcases.PetManagement')
+data.setCell(2, 3, 3663);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'updatePetDetails')
-data.setCell(3, 2, 'testcases.UpdatePet')
-data.setCell(3, 3, 1841);
+data.setCell(3, 1, 'petRegistration')
+data.setCell(3, 2, 'testcases.RegisterPet')
+data.setCell(3, 3, 1965);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'getPetDetails')
+data.setCell(4, 1, 'updatePetDetails')
 data.setCell(4, 2, 'testcases.PetManagement')
-data.setCell(4, 3, 1807);
+data.setCell(4, 3, 1721);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'updatePetDetails')
-data.setCell(5, 2, 'testcases.PetManagement')
-data.setCell(5, 3, 1724);
+data.setCell(5, 2, 'testcases.UpdatePet')
+data.setCell(5, 3, 1697);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'petRegistration')
-data.setCell(6, 2, 'testcases.RegisterPet')
-data.setCell(6, 3, 1664);
+data.setCell(6, 2, 'testcases.PetManagement')
+data.setCell(6, 3, 1652);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'deletePetDetails')
+data.setCell(7, 1, 'getPetDetails')
 data.setCell(7, 2, 'testcases.PetManagement')
-data.setCell(7, 3, 1635);
+data.setCell(7, 3, 1590);
 window.suiteTableData['ServiceSuite']= { tableData: data, tableDiv: 'times-div-ServiceSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-ServiceSuite">
               </div> <!-- times-div-ServiceSuite -->
             </div> <!-- times-div -->
@@ -372,69 +361,111 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
+              <span class="reporter-method-name">petRegistration</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">******************************************</span>
+                <span class="reporter-method-output">---Test STARTED--->testcases.RegisterPet.petRegistration</span>
+                <span class="reporter-method-output">POST Request URL is : https://petstore.swagger.io/v2/pet</span>
+                <span class="reporter-method-output">POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">POST Response Code is : 200</span>
+                <span class="reporter-method-output">POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">---Test PASSED--->testcases.RegisterPet.petRegistration</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">getPetDetails</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">******************************************</span>
+                <span class="reporter-method-output">---Test STARTED--->testcases.PetManagement.getPetDetails</span>
+                <span class="reporter-method-output">GET Request URL is : https://petstore.swagger.io/v2/pet/11</span>
+                <span class="reporter-method-output">GET Response Code is : 200</span>
+                <span class="reporter-method-output">GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">---Test PASSED--->testcases.PetManagement.getPetDetails</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
               <span class="reporter-method-name">updatePetDetails</span>
               <div class="reporter-method-output-div">
+                <span class="reporter-method-output">******************************************</span>
+                <span class="reporter-method-output">---Test STARTED--->testcases.PetManagement.updatePetDetails</span>
                 <span class="reporter-method-output">PUT Request URL is : https://petstore.swagger.io/v2/pet</span>
                 <span class="reporter-method-output">PUT Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
                 <span class="reporter-method-output">PUT Response Code is : 200</span>
                 <span class="reporter-method-output">PUT Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">---Test PASSED--->testcases.PetManagement.updatePetDetails</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">updatePetDetails</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">******************************************</span>
+                <span class="reporter-method-output">---Test STARTED--->testcases.UpdatePet.updatePetDetails</span>
+                <span class="reporter-method-output">PUT Request URL is : https://petstore.swagger.io/v2/pet</span>
+                <span class="reporter-method-output">PUT Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">PUT Response Code is : 200</span>
+                <span class="reporter-method-output">PUT Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">---Test PASSED--->testcases.UpdatePet.updatePetDetails</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">getPetDetails</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">******************************************</span>
+                <span class="reporter-method-output">---Test STARTED--->testcases.GetPetDetailsById.getPetDetails</span>
+                <span class="reporter-method-output">Setting up test data.</span>
+                <span class="reporter-method-output">POST Request URL is : https://petstore.swagger.io/v2/pet</span>
+                <span class="reporter-method-output">POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">POST Response Code is : 200</span>
+                <span class="reporter-method-output">POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">PetId is set to: 11</span>
+                <span class="reporter-method-output">GET Request URL is : https://petstore.swagger.io/v2/pet/11</span>
+                <span class="reporter-method-output">GET Response Code is : 200</span>
+                <span class="reporter-method-output">GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">---Test PASSED--->testcases.GetPetDetailsById.getPetDetails</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">petRegistration</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">******************************************</span>
+                <span class="reporter-method-output">---Test STARTED--->testcases.PetManagement.petRegistration</span>
+                <span class="reporter-method-output">POST Request URL is : https://petstore.swagger.io/v2/pet</span>
+                <span class="reporter-method-output">POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">POST Response Code is : 200</span>
+                <span class="reporter-method-output">POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">---Test PASSED--->testcases.PetManagement.petRegistration</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">deletePetDetails</span>
               <div class="reporter-method-output-div">
+                <span class="reporter-method-output">******************************************</span>
+                <span class="reporter-method-output">---Test STARTED--->testcases.PetManagement.deletePetDetails</span>
+                <span class="reporter-method-output">Setting up test data.</span>
+                <span class="reporter-method-output">POST Request URL is : https://petstore.swagger.io/v2/pet</span>
+                <span class="reporter-method-output">POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">POST Response Code is : 200</span>
+                <span class="reporter-method-output">POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
+                <span class="reporter-method-output">PetId is set to: 11</span>
                 <span class="reporter-method-output">DELETE Request URL is : https://petstore.swagger.io/v2/pet/11</span>
                 <span class="reporter-method-output">DELETE Response Code is : 200</span>
+                <span class="reporter-method-output">---Test PASSED--->testcases.PetManagement.deletePetDetails</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">getPetDetails</span>
+              <span class="reporter-method-name">deletePet</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">GET Request URL is : https://petstore.swagger.io/v2/pet/11</span>
-                <span class="reporter-method-output">GET Response Code is : 200</span>
-                <span class="reporter-method-output">GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">petRegistration</span>
-              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">******************************************</span>
+                <span class="reporter-method-output">---Test STARTED--->testcases.RemovePet.deletePet</span>
+                <span class="reporter-method-output">Setting up test data.</span>
                 <span class="reporter-method-output">POST Request URL is : https://petstore.swagger.io/v2/pet</span>
                 <span class="reporter-method-output">POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
                 <span class="reporter-method-output">POST Response Code is : 200</span>
                 <span class="reporter-method-output">POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">getPetDetails</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">GET Request URL is : https://petstore.swagger.io/v2/pet/11</span>
-                <span class="reporter-method-output">GET Response Code is : 200</span>
-                <span class="reporter-method-output">GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">petRegistration</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">POST Request URL is : https://petstore.swagger.io/v2/pet</span>
-                <span class="reporter-method-output">POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
-                <span class="reporter-method-output">POST Response Code is : 200</span>
-                <span class="reporter-method-output">POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">updatePetDetails</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">PUT Request URL is : https://petstore.swagger.io/v2/pet</span>
-                <span class="reporter-method-output">PUT Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
-                <span class="reporter-method-output">PUT Response Code is : 200</span>
-                <span class="reporter-method-output">PUT Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">deletePetDetails</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">DELETE Request URL is : https://petstore.swagger.io/v2/pet/null</span>
-                <span class="reporter-method-output">DELETE Response Code is : 404</span>
+                <span class="reporter-method-output">PetId is set to: 11</span>
+                <span class="reporter-method-output">DELETE Request URL is : https://petstore.swagger.io/v2/pet/11</span>
+                <span class="reporter-method-output">DELETE Response Code is : 200</span>
+                <span class="reporter-method-output">---Test PASSED--->testcases.RemovePet.deletePet</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -444,24 +475,6 @@ return data;
             <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testcases.UpdatePet</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpRequest</span>
-                <br/>
-                <span class="ignored-method-name">setUpTestData</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testcases.RegisterPet</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpRequest</span>
-                <br/>
-                <span class="ignored-method-name">setUpTestData</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">testcases.RemovePet</span>
               <div class="ignored-methods-div">
@@ -489,6 +502,24 @@ return data;
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testcases.RegisterPet</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUpRequest</span>
+                <br/>
+                <span class="ignored-method-name">setUpTestData</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testcases.UpdatePet</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUpRequest</span>
+                <br/>
+                <span class="ignored-method-name">setUpTestData</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-ServiceSuite" class="panel">
@@ -504,59 +535,57 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">setUpTestData</span>
-                <span class="method-start">2695 ms</span>
+                <span class="method-start">1021 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.RemovePet</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">deletePetDetails</span>
-                <span class="method-start">14854 ms</span>
+                <span class="method-name">deletePet</span>
+                <span class="method-start">12433 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.GetPetDetailsById</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">getPetDetails</span>
-                <span class="method-start">16812 ms</span>
+                <span class="method-start">17795 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.PetManagement</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">petRegistration</span>
-                <span class="method-start">18778 ms</span>
+                <span class="method-start">21811 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.UpdatePet</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">updatePetDetails</span>
-                <span class="method-start">20759 ms</span>
+                <span class="method-start">23485 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.PetManagement</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">getPetDetails</span>
-                <span class="method-start">22605 ms</span>
+                <span class="method-start">25190 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">updatePetDetails</span>
-                <span class="method-start">24417 ms</span>
+                <span class="method-start">26784 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">deletePetDetails</span>
-                <span class="method-start">26145 ms</span>
+                <span class="method-start">28509 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.RegisterPet</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">petRegistration</span>
-                <span class="method-start">27785 ms</span>
+                <span class="method-start">32176 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

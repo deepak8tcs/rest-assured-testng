@@ -110,10 +110,13 @@ public class PetManagement extends TestBase {
 	@Test(priority = 3)
 	public void deletePetDetails() throws Exception
 	{		
+		if(id == null)
+			setUpPetData();
+
 		Response response= deleteRequest("v2/pet/"+getPetId());
 		Assert.assertEquals(response.getStatusCode(), 200);
 		Assert.assertTrue(response.getBody().asString().isEmpty());
-
+		setId(null);
 	}
 
 

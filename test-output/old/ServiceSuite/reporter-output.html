@@ -1,31 +1,75 @@
-<h2>Reporter output</h2><table><tr><td>POST Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
-<tr><td>POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
-<tr><td>POST Response Code is : 200</td></tr>
-<tr><td>POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
-<tr><td>DELETE Request URL is : https://petstore.swagger.io/v2/pet/null</td></tr>
-<tr><td>DELETE Response Code is : 404</td></tr>
-<tr><td>GET Request URL is : https://petstore.swagger.io/v2/pet/11</td></tr>
-<tr><td>GET Response Code is : 200</td></tr>
-<tr><td>GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<h2>Reporter output</h2><table><tr><td>Setting up test data.</td></tr>
 <tr><td>POST Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
 <tr><td>POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
 <tr><td>POST Response Code is : 200</td></tr>
 <tr><td>POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
-<tr><td>PUT Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
-<tr><td>PUT Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
-<tr><td>PUT Response Code is : 200</td></tr>
-<tr><td>PUT Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
-<tr><td>GET Request URL is : https://petstore.swagger.io/v2/pet/11</td></tr>
-<tr><td>GET Response Code is : 200</td></tr>
-<tr><td>GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
-<tr><td>PUT Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
-<tr><td>PUT Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
-<tr><td>PUT Response Code is : 200</td></tr>
-<tr><td>PUT Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>PetId is set to: 11</td></tr>
+<tr><td>******************************************</td></tr>
+<tr><td>---Test STARTED--->testcases.RemovePet.deletePet</td></tr>
+<tr><td>Setting up test data.</td></tr>
+<tr><td>POST Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
+<tr><td>POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>POST Response Code is : 200</td></tr>
+<tr><td>POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>PetId is set to: 11</td></tr>
 <tr><td>DELETE Request URL is : https://petstore.swagger.io/v2/pet/11</td></tr>
 <tr><td>DELETE Response Code is : 200</td></tr>
+<tr><td>---Test PASSED--->testcases.RemovePet.deletePet</td></tr>
+<tr><td>******************************************</td></tr>
+<tr><td>---Test STARTED--->testcases.GetPetDetailsById.getPetDetails</td></tr>
+<tr><td>Setting up test data.</td></tr>
 <tr><td>POST Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
 <tr><td>POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
 <tr><td>POST Response Code is : 200</td></tr>
 <tr><td>POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>PetId is set to: 11</td></tr>
+<tr><td>GET Request URL is : https://petstore.swagger.io/v2/pet/11</td></tr>
+<tr><td>GET Response Code is : 200</td></tr>
+<tr><td>GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>---Test PASSED--->testcases.GetPetDetailsById.getPetDetails</td></tr>
+<tr><td>******************************************</td></tr>
+<tr><td>---Test STARTED--->testcases.PetManagement.petRegistration</td></tr>
+<tr><td>POST Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
+<tr><td>POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>POST Response Code is : 200</td></tr>
+<tr><td>POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>---Test PASSED--->testcases.PetManagement.petRegistration</td></tr>
+<tr><td>******************************************</td></tr>
+<tr><td>---Test STARTED--->testcases.UpdatePet.updatePetDetails</td></tr>
+<tr><td>PUT Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
+<tr><td>PUT Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>PUT Response Code is : 200</td></tr>
+<tr><td>PUT Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>---Test PASSED--->testcases.UpdatePet.updatePetDetails</td></tr>
+<tr><td>******************************************</td></tr>
+<tr><td>---Test STARTED--->testcases.PetManagement.getPetDetails</td></tr>
+<tr><td>GET Request URL is : https://petstore.swagger.io/v2/pet/11</td></tr>
+<tr><td>GET Response Code is : 200</td></tr>
+<tr><td>GET Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>---Test PASSED--->testcases.PetManagement.getPetDetails</td></tr>
+<tr><td>******************************************</td></tr>
+<tr><td>---Test STARTED--->testcases.PetManagement.updatePetDetails</td></tr>
+<tr><td>PUT Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
+<tr><td>PUT Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>PUT Response Code is : 200</td></tr>
+<tr><td>PUT Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>---Test PASSED--->testcases.PetManagement.updatePetDetails</td></tr>
+<tr><td>******************************************</td></tr>
+<tr><td>---Test STARTED--->testcases.PetManagement.deletePetDetails</td></tr>
+<tr><td>Setting up test data.</td></tr>
+<tr><td>POST Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
+<tr><td>POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>POST Response Code is : 200</td></tr>
+<tr><td>POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>PetId is set to: 11</td></tr>
+<tr><td>DELETE Request URL is : https://petstore.swagger.io/v2/pet/11</td></tr>
+<tr><td>DELETE Response Code is : 200</td></tr>
+<tr><td>---Test PASSED--->testcases.PetManagement.deletePetDetails</td></tr>
+<tr><td>******************************************</td></tr>
+<tr><td>---Test STARTED--->testcases.RegisterPet.petRegistration</td></tr>
+<tr><td>POST Request URL is : https://petstore.swagger.io/v2/pet</td></tr>
+<tr><td>POST Request Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>POST Response Code is : 200</td></tr>
+<tr><td>POST Response Body is : {"id":11,"category":{"id":0,"name":"string"},"name":"doggie-10","photoUrls":["string"],"tags":[{"id":0,"name":"string0"},{"id":1,"name":"string1"}],"status":"available"}</td></tr>
+<tr><td>---Test PASSED--->testcases.RegisterPet.petRegistration</td></tr>
 </table>

@@ -10,11 +10,16 @@ public class RemovePet extends TestBase {
 
 
 	@Test
-	public void deletePetDetails() throws Exception
+	public void deletePet() throws Exception
 	{		
+
+		if(getId() == null)
+			setUpPetData();
+
 		Response response= deleteRequest("v2/pet/"+getId());
 		Assert.assertEquals(response.getStatusCode(), 200);
-		Assert.assertTrue(response.getBody().asString().isEmpty());
+		Assert.assertTrue(response.getBody().asString().isEmpty());		
+		setId(null);
 
 	}
 

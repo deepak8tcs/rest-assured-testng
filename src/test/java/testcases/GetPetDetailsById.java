@@ -13,6 +13,8 @@ public class GetPetDetailsById extends TestBase {
 	@Test
 	public void getPetDetails() throws Exception
 	{		
+
+		setUpPetData();
 		Response response= getRequest("v2/pet/"+getId());
 
 		Assert.assertEquals(response.getStatusCode(), 200);
