@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="ServiceSuite">
 	<test thread-count="5" name="Test">
 
@@ -6,8 +7,6 @@
 			<package name="testcases.*" />
 		</packages>
 
-<!-- 		<classes>
-		<class name="testcases.Way1_Misc_Old"/>		
-		</classes> -->
+		<!-- <classes> <class name="testcases.Way1_Misc_Old"/> </classes> -->
 	</test>
 </suite>

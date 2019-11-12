@@ -13,7 +13,7 @@
 		<jre.level>1.8</jre.level>
 		<jdk.level>1.8</jdk.level>
 		<compiler.version>3.8.1</compiler.version>
-		<surefire.version>2.20</surefire.version>
+		<surefire.version>3.0.0-M3</surefire.version>
 
 	</properties>
 	
@@ -28,6 +28,18 @@
                 <target>${jdk.level}</target>
             </configuration>
         </plugin>
+        <!-- Below plug-in is used to execute tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${surefire.version}</version>
+				<configuration>
+					<suiteXmlFiles>
+						<!-- TestNG suite XML files -->
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
     </plugins>
 </build>
 
