@@ -23,13 +23,14 @@ public class Way1_Misc_Old {
 	public void GetPetDetails()
 	{   
 
-		//Given When Then BDD (Gherkin) style
+		//BDD style: Gherkin( Given When Then ) style
 
-		Response response = given()
-				.contentType(ContentType.JSON)
-				.accept(ContentType.JSON)
-				.when()
-				.get("https://petstore.swagger.io/v2/pet/1");
+		Response response = 
+				given().
+				contentType(ContentType.JSON).
+				accept(ContentType.JSON).
+				when().
+				get("https://petstore.swagger.io/v2/pet/1");
 
 		response.then().statusCode(200);
 		response.then().body("id", Matchers.any(Integer.class));
@@ -46,13 +47,23 @@ public class Way1_Misc_Old {
 		//testNG assertion has benefit that we can give custom message in case of failure
 		System.out.println("Response Body is =>  " + response.body().asString());
 
+		//	    given().
+		//	    when().
+		//	        get("http://ergast.com/api/f1/2017/circuits.json").
+		//	    then().
+		//	        assertThat().
+		//	        statusCode(200).
+		//	    and().
+		//	        contentType(ContentType.JSON).
+		//	    and().
+		//	        header("Content-Length",equalTo("4567"));
 
 	}
 	//@Test
 	public void GetWeatherDetails()
 	{   
 
-		//Basic Rest Assured syntax
+		//Non-BDD style: 
 
 		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
 
@@ -127,6 +138,98 @@ public class Way1_Misc_Old {
 		int statusCode = response.getStatusCode();
 		Assert.assertEquals(statusCode, 201);
 		Assert.assertEquals(response.jsonPath().get("SuccessCode"), "OPERATION_SUCCESS", "Correct Success code was not returned");
+	}
+
+	//@Test
+	public void testWithPathAndQueryParam() {
+
+		//‘Path Parameter’or URI parameter is basically used to identify a specific resource or resources.
+		//‘Query Parameter’ is used to filter or sort the resources. starts with ? and combined with & for multiple query params
+
+		String id = "10";
+		RestAssured.baseURI = "https://petstore.swagger.io/";
+		Response response = null;
+
+		response = RestAssured.given()
+				.pathParam("id", id)
+				//.pathParam("name", "john")
+				.when()
+				.get("v2/pet/{id}"); //we can give relative path here, no need of absolute url.
+
+		System.out.println("Response :" + response.asString());
+		System.out.println("Status Code :" + response.getStatusCode());
+
+		response = RestAssured.given()
+				.when()
+				.get("v2/pet/{id}/{name}",id,"john");  
+
+		//		rest assured path param is just to improve the readability otherwise
+		//		we can achieve the same thing using string conact + or replace() etc
+
+		// QUERY Param:
+
+		//to form a url like this=> https://petstore.swagger.io/v2/pet/10?page=2&status=active
+		response = RestAssured.given()
+				.pathParam("id",10)
+				.queryParam("page", 2)
+				.queryParam("status", "active")
+				.when()
+				.get("v2/pet/{id}"); //we can give relative path here, no need of absolute url.
+
+	}
+
+	//@Test
+	public void testWithDifferentAuthentications() {
+
+		//The basic authentication scheme requires the consumer to send user id and a password encoded in Base64.
+		RestAssured.baseURI = "https://petstore.swagger.io/";
+		Response response = 
+				given()
+				.auth()
+				.basic("user1", "user1Pass")
+				.when()
+				.get("v2/pet/10");
+
+		//Using Oauth2
+		response = 
+				given()
+				.auth()
+				.oauth2("accessToken")
+				.when()
+				.get("v2/pet/10");
+
+		//Using Oauth1.0 (old oauth )
+		response = 
+				given()
+				.auth()
+				.oauth("consumerKey", "consumerSecret", "accessToken", "secretToken")
+				.when()
+				.get("v2/pet/10");
+
+		//Preemptive Authentication
+		response = 
+				given()
+				.auth()
+				.preemptive()
+				.basic("user1", "user1Pass")
+				.when()
+				.get("v2/pet/10");
+
+		//Using Digest Authentication
+		response = 
+				given()
+				.auth()
+				.digest("userName", "password")
+				.when()
+				.get("v2/pet/10");
+
+		//Using Form Authentication
+		response = 
+				given()
+				.auth()
+				.form("userName", "password")
+				.when()
+				.get("v2/pet/10");
 	}
 
 }

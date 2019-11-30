@@ -2,6 +2,7 @@ package test.base;
 
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
@@ -32,6 +33,11 @@ public class TestBase {
 		RestAssured.baseURI =properties.getPropertyValue("baseurl");
 	}
 
+	@AfterSuite
+	public void stearDownRequest(){
+		RestAssured.reset();
+	}
+	
 	@BeforeTest
 	public void setUpTestData(){
 		setUpPetData();
