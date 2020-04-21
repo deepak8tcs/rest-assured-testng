@@ -107,7 +107,7 @@ public class PetManagement extends TestBase {
 
 	}
 
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void deletePetDetails() throws Exception
 	{		
 		if(id == null)

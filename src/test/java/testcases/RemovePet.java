@@ -9,7 +9,7 @@ import test.base.TestBase;
 public class RemovePet extends TestBase {
 
 
-	@Test
+	//@Test
 	public void deletePet() throws Exception
 	{		
 

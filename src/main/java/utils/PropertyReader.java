@@ -10,13 +10,22 @@ public class PropertyReader {
 	public FileInputStream fis;
 	private static PropertyReader propertyManager = null;
 	private static final String propertiesFilePath = "./src/test/resources/properties/";
-	private static final String configFileName = "config.properties";
+	private static final String intEnvConfig = "int-env.properties";
+	private static final String testEnvConfig = "test-env.properties";
 	//private static final String inputFileName = "input.properties";
 
 	private Properties prop = new Properties();
 
 	private PropertyReader() {
-		loadPropertiesFile(propertiesFilePath, configFileName);
+		if(System.getProperty("env").equalsIgnoreCase("int")) {
+			System.out.println("Running on int environment");
+			loadPropertiesFile(propertiesFilePath, intEnvConfig);
+		}
+		else {
+			System.out.println("Running on test environment");
+			loadPropertiesFile(propertiesFilePath, testEnvConfig);
+		}
+			
 		//loadPropertiesFile(propertiesFilePath, inputFileName);
 
 	}
