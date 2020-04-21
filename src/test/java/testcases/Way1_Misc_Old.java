@@ -143,8 +143,8 @@ public class Way1_Misc_Old {
 	//@Test
 	public void testWithPathAndQueryParam() {
 
-		//‘Path Parameter’or URI parameter is basically used to identify a specific resource or resources.
-		//‘Query Parameter’ is used to filter or sort the resources. starts with ? and combined with & for multiple query params
+		//Path Parameter or URI parameter is basically used to identify a specific resource or resources.
+		//Query Parameter is used to filter or sort the resources. starts with ? and combined with & for multiple query params
 
 		String id = "10";
 		RestAssured.baseURI = "https://petstore.swagger.io/";
