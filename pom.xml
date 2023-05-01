@@ -9,7 +9,7 @@
 	<properties>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<testng.version>7.0.0</testng.version>
+		<testng.version>7.7.0</testng.version>
 		<slf4j.version>1.6.4</slf4j.version>
 		<logback.version>1.0.1</logback.version>
 		<jre.level>1.8</jre.level>
